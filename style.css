@@ -29,8 +29,10 @@
 }
 
 body{
-    background-image: var(--bg-url) no-repeat top center/cover;
-    height: 100vh;
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 
 body *{
@@ -39,8 +41,7 @@ body *{
 }
 
 #container{
-    width: 100%;
-    max-width: 588px;
+    width: 360px;
     margin: 56px auto 0 auto;
     padding: 0 24px;
 }
@@ -60,23 +61,50 @@ body *{
 }
 
 #switch{
-    display: flex;
-    justify-content: center;
-    padding: 8px 0;
+    position: relative;
+    width: 64px;
+    height: 32px;
+    margin: 8px auto;
+}
+
+#switch span{
+    position: absolute;
+    inset: 0;
+    display: block;
+    z-index: 1;
+    background-color: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 9999px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+
+    pointer-events: none;
 }
 
 #switch button{
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--switch-bg-color);
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--switch-bg-color);
-    border: none;
-    border-radius: 50%;
     cursor: pointer;
 
-    transition: background-color 0.4s ease, transform 0.4s ease;
+    transition: left 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
+}
+
+.light #switch button{
+    left: 34px;
 }
 
 #switch button:hover{
@@ -162,9 +190,7 @@ footer a{
     text-decoration: underline;
 }
 
-
-/* media queries */
-
+/* Layout desktop */
 @media (min-width: 700px){
     :root{
         --bg-url: url('./assets/bg-desktop.jpg');
