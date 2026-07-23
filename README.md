@@ -1,6 +1,6 @@
 # DevLinks
 
-![Preview do DevLinks](./github/devlinks-preview.png)
+![Preview do DevLinks](./devlinks-preview.png)
 
 Página pessoal estilo "link in bio" (Linktree), com alternância entre tema claro e escuro.
 
