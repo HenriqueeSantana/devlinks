@@ -29,10 +29,8 @@
 }
 
 body{
-    background-image: var(--bg-url);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
+    background-image: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 
 body *{
@@ -164,10 +162,15 @@ footer a{
     text-decoration: underline;
 }
 
-/* Layout desktop */
+
+/* media queries */
+
 @media (min-width: 700px){
-    #container{
-        width: 380px;
-        margin: 64px auto 0 auto;
+    :root{
+        --bg-url: url('./assets/bg-desktop.jpg');
+    }
+
+    .light{
+        --bg-url: url('./assets/bg-desktop-light.jpg');
     }
 }
