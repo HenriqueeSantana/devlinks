@@ -51,5 +51,5 @@ Abra o arquivo `index.html` no navegador ou rode com o Live Server do VS Code.
 
 Henrique Santana
 - [GitHub](https://github.com/henrique-santana)
-- [Instagram](https://instagram.com/henrique.santana)
-- [LinkedIn](https://linkedin.com/in/henrique-santana)
+- [Instagram](https://www.instagram.com/__henrique.sant/)
+- [LinkedIn](https://www.linkedin.com/in/henrique-santana-dev/)
